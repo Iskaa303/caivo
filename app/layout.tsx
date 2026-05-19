@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/navigation";
+import { Analytics } from "@vercel/analytics/next"
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );
