@@ -54,7 +54,7 @@ export default function TopicsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {topics.map((topic) => (
           <Link key={topic.id} href={`/topics/${topic.id}`} className="block group">
-            <Card className="h-full bg-card border-border border transition-colors hover:border-accent/50 hover:shadow-sm">
+            <Card className="h-full bg-card border-border border transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg">
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="flex items-center justify-center h-8 w-8 rounded bg-accent/10 text-accent">

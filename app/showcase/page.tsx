@@ -8,28 +8,28 @@ const showcaseItems = [
     title: "AI Trade Bot V2",
     creator: "Prateep Kumar Mandal",
     type: "Project Writeup",
-    image: "/showcase-1.jpg",
+    image: "/logo.png",
     link: "#",
   },
   {
     title: "Ethics in Tech Poster",
     creator: "Evan Wright",
     type: "Presentation",
-    image: "/showcase-2.jpg",
+    image: "/logo.png",
     link: "#",
   },
   {
     title: "Hackathon Winning App: MedVision",
     creator: "CAIVO Team",
     type: "App Demo",
-    image: "/showcase-3.jpg",
+    image: "/logo.png",
     link: "#",
   },
   {
     title: "LLM Fine-Tuning Guide",
     creator: "Member Contributor",
     type: "Tutorial",
-    image: "/showcase-4.jpg",
+    image: "/logo.png",
     link: "#",
   }
 ];
@@ -46,18 +46,17 @@ export default function ShowcasePage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {showcaseItems.map((item, index) => (
-          <Card key={index} className="overflow-hidden bg-card border-border border group">
-            <Link href={item.link} className="block relative aspect-video bg-muted border-b border-border">
-              {/* Note: In development, Next.js Image component will throw an error if the image doesn't exist.
-                  We'll use a standard img tag with an error fallback or just let it show the broken image icon
-                  to fulfill the requirement of referencing non-existent pictures in the public folder. */}
+          <Card key={index} className="overflow-hidden bg-card border-border border group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <Link href={item.link} className="block relative aspect-video bg-muted border-b border-border overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center text-muted-foreground bg-muted z-0">
                 <span>[Placeholder: {item.image}]</span>
               </div>
-              <img 
-                src={item.image} 
-                alt={item.title} 
-                className="absolute inset-0 w-full h-full object-cover z-10"
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="absolute inset-0 object-cover z-10 transition-transform duration-500 group-hover:scale-105"
+                unoptimized // mandatory cause we don't have images for each showcase yet
               />
             </Link>
             <CardContent className="p-6">

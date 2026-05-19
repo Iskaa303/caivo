@@ -41,7 +41,7 @@ export default function ResearchPage() {
 
       <div className="grid grid-cols-1 gap-6">
         {publications.map((pub, index) => (
-          <Card key={index} className="bg-card border-border border hover:shadow-sm transition-shadow">
+          <Card key={index} className="bg-card border-border border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <CardHeader className="pb-3">
               <div className="flex justify-between items-start gap-4">
                 <div>

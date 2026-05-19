@@ -45,7 +45,7 @@ export default function AboutPage() {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {officers.map((officer, index) => (
-          <Card key={index} className="overflow-hidden bg-card border-border border">
+          <Card key={index} className="overflow-hidden bg-card border-border border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="aspect-square relative w-full bg-muted border-b border-border">
               <Image 
                 src={officer.image} 
