@@ -104,13 +104,13 @@ export default function AboutPage() {
           CAIVO (Charlotte AI and Vanguard Organization) is a student-led initiative founded in 2025 by Evan Wright and Prateep Kumar Mandal. We explore the world of AI through debate, discussion, and virtual learning.
         </p>
         <p className="text-lg text-foreground/80 leading-relaxed">
-          We believe in using AI responsibly, and we're shaping the next generation of student innovators and critical thinkers in the Charlotte community. Our goal is to make AI education accessible and engaging for all students.
+          We believe in using AI responsibly, and we&apos;re shaping the next generation of student innovators and critical thinkers in the Charlotte community. Our goal is to make AI education accessible and engaging for all students.
         </p>
       </div>
 
       <div className="text-center mb-16">
         <h2 className="text-3xl font-bold tracking-tight mb-2">Our Leadership</h2>
-        <p className="text-foreground/70">The dedicated team behind CAIVO's vision and operations.</p>
+        <p className="text-foreground/70">The dedicated team behind CAIVO&apos;s vision and operations.</p>
       </div>
 
       <div className="flex flex-col items-center space-y-12 md:space-y-16">

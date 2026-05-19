@@ -42,13 +42,13 @@ export default function NewsPage() {
       </div>
 
       <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
-        {newsItems.map((item, index) => (
+        {newsItems.map((item) => (
           <div key={item.id} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
             {/* Timeline dot */}
             <div className="flex items-center justify-center w-10 h-10 rounded-full border border-border bg-card shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10 text-accent">
               <Calendar className="w-4 h-4" />
             </div>
-            
+
             {/* Card */}
             <Card className="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-card border-border border">
               <CardHeader className="pb-3">
@@ -57,7 +57,7 @@ export default function NewsPage() {
                   <span className="text-xs text-foreground/50">{item.date}</span>
                 </div>
                 <CardTitle className="text-xl">{item.title}</CardTitle>
-                
+
                 {(item.time || item.location) && (
                   <CardDescription className="flex items-center gap-4 mt-2">
                     {item.time && (
