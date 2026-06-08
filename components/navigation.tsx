@@ -4,12 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Menu, X, Home, Users, FileText, Library, Sparkles, Newspaper, Mail } from "lucide-react";
+import { Menu, X, Home, Users, FileText, Library, Sparkles, Newspaper, Mail, Video } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const routes = [
   { href: "/", label: "Home", icon: Home },
   { href: "/about", label: "Officers", icon: Users },
+  { href: "/meetings", label: "Videos", icon: Video },
   { href: "/research", label: "Research", icon: FileText },
   { href: "/topics", label: "STEM Topics", icon: Library },
   { href: "/showcase", label: "Showcase", icon: Sparkles },
