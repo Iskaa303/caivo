@@ -1,72 +1,68 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
-const officers = [
+interface Officer {
+  name: string;
+  title: string;
+  bio: string;
+  picture?: string;
+}
+
+const officers: Officer[] = [
   {
     name: "Evan Wright",
     title: "President",
     bio: "Passionate about AI ethics and responsible technology development. Leads the strategic vision for CAIVO.",
-    image: "/officer_placeholder.png",
   },
   {
     name: "Prateep Kumar Mandal",
     title: "Co-President",
     bio: "Focused on technical implementation and AI research. Organizes coding workshops and virtual learning events.",
-    image: "/officer_placeholder.png",
   },
   {
     name: "Vidush",
     title: "Secretary / Communications",
     bio: "Generic bio of a secretary, I'm tired of creating descriptions.",
-    image: "/officer_placeholder.png",
   },
   {
     name: "Iskander Madikhan",
     title: "Executive Director of STEM Division",
     bio: "Smart, passionate, and handsome young man.",
-    image: "/officer_placeholder.png",
   },
   {
     name: "Yin",
     title: "Executive Director of Finance Division",
     bio: "Good guy, nothing else to say.",
-    image: "/officer_placeholder.png",
   },
   {
     name: "Mukund",
     title: "Executive Researcher of STEM Division",
     bio: "Good guy, nothing else to say.",
-    image: "/officer_placeholder.png",
   },
   {
     name: "Anwitha",
     title: "STEM Assistant of STEM Division",
     bio: "Good person, nothing else to say.",
-    image: "/officer_placeholder.png",
   },
   {
     name: "Tejas",
     title: "Executive Researcher of Finance Division",
     bio: "Good guy, nothing else to say.",
-    image: "/officer_placeholder.png",
   },
   {
     name: "Haris",
     title: "Finance Assistant of Finance Division",
     bio: "Good guy, nothing else to say.",
-    image: "/officer_placeholder.png",
   },
   {
     name: "Open Position",
     title: "Vice President",
     bio: "We are currently looking for a Vice President to help organize events and outreach. Join us today!",
-    image: "/officer_placeholder.png",
   },
   {
     name: "Open Position",
     title: "Director of Outreach",
     bio: "We are currently looking for a Director of Outreach to help expand our network. Join us today!",
-    image: "/officer_placeholder.png",
   }
 ];
 
@@ -76,11 +72,11 @@ export default function AboutPage() {
   const assistants = officers.filter(o => o.title.includes("Researcher") || o.title.includes("Assistant"));
   const openPositions = officers.filter(o => o.name === "Open Position");
 
-  const OfficerCard = ({ officer }: { officer: typeof officers[0] }) => (
+  const OfficerCard = ({ officer }: { officer: Officer }) => (
     <Card className="overflow-hidden bg-card border-border border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg w-full max-w-[280px]">
       <div className="aspect-square relative w-full bg-muted border-b border-border">
         <Image
-          src={officer.image}
+          src={officer.picture || "/pfps/placeholder.png"}
           alt={officer.name}
           fill
           className="object-cover"
